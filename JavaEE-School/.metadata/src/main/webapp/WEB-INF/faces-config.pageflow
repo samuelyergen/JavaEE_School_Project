@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14141592409490" configfile="/JavaEE-School/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="welcomeSchool.xhtml" x="122" y="1714" id="pf16388912892085" referenceLink="//@navigationRule.15/@fromViewId|" outlinks="pf16388912892086 pf16388912892087 pf16388912892088 pf16388912892089 pf163889128920810 pf163889128920911 pf16402105799600 pf16408152910890 pf16408173033320" path="/welcomeSchool.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="addMarkToStudentForm.xhtml" x="333" y="396" id="pf163889128920912" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf163889128920913" inlinks="pf16388912892086" path="/addMarkToStudentForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="addStudentToSubjectForm.xhtml" x="338" y="562" id="pf163889128920914" referenceLink="//@navigationRule.7/@fromViewId|" outlinks="pf163889128920915" inlinks="pf16388912892087" path="/addStudentToSubjectForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="applyForm.xhtml" x="338" y="946" id="pf163889128920916" referenceLink="//@navigationRule.8/@fromViewId|" outlinks="pf163889128920917" inlinks="pf16388912892088" path="/applyForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="createSubject.xhtml" x="346" y="1224" id="pf163889128920918" referenceLink="//@navigationRule.9/@fromViewId|" outlinks="pf163889128920919" inlinks="pf16388912892089" path="/createSubject.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="getStudentMarksForm.xhtml" x="384" y="2736" id="pf163889128920920" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" outlinks="pf16416726567420" inlinks="pf163889128920810" path="/getStudentMarksForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="modifySubjetcForm.xhtml" x="338" y="1714" id="pf163889128920921" referenceLink="//@navigationRule.10/@fromViewId|" outlinks="pf163889128920922" inlinks="pf163889128920911" path="/modifySubjetcForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="showResult.xhtml" x="554" y="1330" id="pf163889128920923" referenceLink="//@navigationRule.14/@navigationCase.0/@toViewId|" inlinks="pf163889128920913 pf163889128920915 pf163889128920917 pf163889128920919 pf163889128920922 pf16406415324442 pf16408152910901" path="/showResult.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="addStudent.xhtml" x="338" y="2098" id="pf16402105799611" referenceLink="//@navigationRule.12/@fromViewId|" outlinks="pf16406415324442" inlinks="pf16402105799600" path="/addStudent.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="addTeacher.xhtml" x="384" y="2208" id="pf16408152910902" referenceLink="//@navigationRule.14/@fromViewId|" outlinks="pf16408152910901" inlinks="pf16408152910890" path="/addTeacher.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="subjectListResult.xhtml" x="338" y="3250" id="pf16408173033321" referenceLink="//@navigationRule.15/@navigationCase.0/@toViewId|" inlinks="pf16408173033320" path="/subjectListResult.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="studentListResult.xhtml" x="122" y="2353" id="pf16408709399061" path="/studentListResult.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="teacherListResult.xhtml" x="122" y="2993" id="pf16408757226395" path="/teacherListResult.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="marksResult.xhtml" x="720" y="1452" id="pf16416726567421" inlinks="pf16416726567420" path="/marksResult.xhtml"/>
+  <links id="pf16388912892086" target="pf163889128920912" source="pf16388912892085" outcome="addMarkToStudentForm"/>
+  <links id="pf16388912892087" target="pf163889128920914" source="pf16388912892085" outcome="addStudentToSubjectForm"/>
+  <links id="pf16388912892088" target="pf163889128920916" source="pf16388912892085" outcome="applyForm"/>
+  <links id="pf16388912892089" target="pf163889128920918" source="pf16388912892085" outcome="createSubjectForm"/>
+  <links id="pf163889128920810" target="pf163889128920920" source="pf16388912892085" outcome="getStudentMarksForm"/>
+  <links id="pf163889128920911" target="pf163889128920921" source="pf16388912892085" outcome="modifySubjectForm"/>
+  <links id="pf163889128920913" target="pf163889128920923" source="pf163889128920912" outcome="#{schoolBeanController.performGiveGrade}"/>
+  <links id="pf163889128920915" target="pf163889128920923" source="pf163889128920914" outcome="#{schoolBeanController.performAddStudentToCourse}"/>
+  <links id="pf163889128920917" target="pf163889128920923" source="pf163889128920916" outcome="#{schoolBeanController.performApplyCourse}"/>
+  <links id="pf163889128920919" target="pf163889128920923" source="pf163889128920918" outcome="#{schoolBeanController.performCreateSubject}"/>
+  <links id="pf163889128920922" target="pf163889128920923" source="pf163889128920921" outcome="#{schoolBeanController.performModifySubject}"/>
+  <links id="pf16402105799600" target="pf16402105799611" source="pf16388912892085" outcome="addStudent"/>
+  <links id="pf16406415324442" target="pf163889128920923" source="pf16402105799611" outcome="#{schoolBeanController.performCreateStudent}"/>
+  <links id="pf16408152910890" target="pf16408152910902" source="pf16388912892085" outcome="addTeacher"/>
+  <links id="pf16408152910901" target="pf163889128920923" source="pf16408152910902" outcome="#{schoolBeanController.performCreateTeacher}"/>
+  <links id="pf16408173033320" target="pf16408173033321" source="pf16388912892085" outcome="subjectListResult"/>
+  <links id="pf16416726567420" target="pf16416726567421" source="pf163889128920920" outcome="#{schoolBeanController.performGetStudentMarksOnSubject}"/>
+</pageflow:Pageflow>

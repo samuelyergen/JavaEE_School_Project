@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/SchoolTemplate.xhtml">
+    <ui:define name="content">
+    	<h:form>
+        	<h:outputLabel value="Modify subject:"></h:outputLabel>
+        	<br></br>
+        	<h:panelGrid columns="2">
+        		<h:outputText value="Subject to modify: "></h:outputText>
+	        	<h:selectOneMenu required="true" valueChangeListener="#{schoolBeanController.updateSubjectName}" onchange="submit()">
+      			    <f:selectItem value="#{null}" itemDisabled="true" itemLabel="-- Choose a subject --" />
+	        		<f:selectItems value="#{schoolBeanController.subjectNames}"/>
+	        	</h:selectOneMenu>
+        		<h:outputText value="New name:"></h:outputText>
+                <h:inputText required="true" value="#{schoolBeanController.subjectNameInput}" maxlength="20" style="width: 80px;"></h:inputText>
+        	</h:panelGrid>
+     		<h:commandButton value="Modify" action="#{schoolBeanController.performModifySubject}"></h:commandButton>
+        </h:form>
+        <br></br>
+        <br></br>
+        <h:form>
+        <h:commandLink action="welcomeSchool">
+         <h:outputText value="Go to home page" />
+        </h:commandLink>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/SchoolTemplate.xhtml">
+    <ui:define name="content">
+        <h:outputLabel value="Welcome to Custom School"></h:outputLabel>
+        <br></br>
+        <h:outputLabel value="#{schoolBeanController.userRole}"></h:outputLabel>
+        <br></br>
+        <h:form >
+	        <h:commandLink action="addStudent">
+	         <h:outputText value="Add a student" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	     <h:form >
+	        <h:commandLink action="addTeacher">
+	         <h:outputText value="Add a teacher" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	     <h:form >
+	        <h:commandLink action="createSubject">
+	         <h:outputText value="Add a new subject" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	     <h:form >
+	        <h:commandLink action="subjectListResult">
+	         <h:outputText value="list of subjects" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	     <h:form >
+	        <h:commandLink action="studentListResult">
+	         <h:outputText value="list of students" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	     <h:form >
+	        <h:commandLink action="teacherListResult">
+	         <h:outputText value="list of teachers" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	    <h:form >
+	        <h:commandLink action="addMarkToStudentForm">
+	         <h:outputText value="Give a grade to a student" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	     <h:form >
+	        <h:commandLink action="addStudentToSubjectForm">
+	         <h:outputText value="Enrole a student in a subject" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	     <h:form >
+	        <h:commandLink action="addTeacherToSubjectForm">
+	         <h:outputText value="Enrole a teacher in a subject" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	    <h:form >
+	        <h:commandLink action="modifySubjetcForm">
+	         <h:outputText value="modify a subject" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	    <h:form >
+	        <h:commandLink action="getStudentMarksForm">
+	         <h:outputText value="get student marks" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	    <h:form>
+	    <h:commandButton value="Populate DB data" action="#{schoolBeanController.populateDBData}"></h:commandButton>
+	    </h:form>
+	    
+       <!--  <h:form rendered="${schoolBeanController.userRole eq 'Student'}">
+	        <h:commandLink action="applyForm">
+	         <h:outputText value="Apply for subject" />
+	        </h:commandLink>
+	        <br></br>
+	    </h:form>
+	   
+	   <h:form rendered="${schoolBeanController.userRole eq 'Student'}">
+	        <h:commandLink action="getStudentMarksForm">
+	         <h:outputText value="Get my grades" />
+	        </h:commandLink>
+	   
+	   <br></br>
+	   </h:form>
+	   <h:form rendered="${schoolBeanController.userRole eq 'Teacher'}">
+	         <h:commandLink action="addStudentToSubjectForm">
+	         <h:outputText value="Add student to subject" />
+	        </h:commandLink>
+	   
+	   <br></br>
+	   </h:form>
+	   <h:form rendered="${schoolBeanController.userRole eq 'Teacher'}">
+	         <h:commandLink action="addMarkToStudentForm">
+	         <h:outputText value="Add grade to student" />
+	        </h:commandLink>
+	   
+	   <br></br>
+	   </h:form>
+	   <h:form rendered="${schoolBeanController.userRole eq 'Admin'}">
+	        <h:commandLink action="createSubjectForm">
+	         <h:outputText value="Create new subject" />
+	        </h:commandLink>
+	   
+	   <br></br>
+	   </h:form>
+	   <h:form rendered="${schoolBeanController.userRole eq 'Admin'}">
+	         <h:commandLink action="modifySubjectForm">
+	         <h:outputText value="Modify subject" />
+	        </h:commandLink>
+	   
+	   </h:form> -->
+  
+    </ui:define>
+</ui:composition>
+</html>
